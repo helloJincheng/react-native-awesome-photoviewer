@@ -4,11 +4,11 @@ buildscript {
             google()
             jcenter()
         }
-
-        dependencies {
-            classpath 'com.android.tools.build:gradle:3.5.3'
-        }
+      dependencies {
+          classpath("com.android.tools.build:gradle")
+      }
     }
+
 }
 
 apply plugin: 'com.android.library'
@@ -18,11 +18,11 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('AwesomePhotoview_compileSdkVersion', 29)
-    buildToolsVersion safeExtGet('AwesomePhotoview_buildToolsVersion', '29.0.2')
+    compileSdkVersion safeExtGet('AwesomePhotoview_compileSdkVersion', 33)
+    buildToolsVersion safeExtGet('AwesomePhotoview_buildToolsVersion', '33.0.0')
     defaultConfig {
-        minSdkVersion safeExtGet('AwesomePhotoview_minSdkVersion', 16)
-        targetSdkVersion safeExtGet('AwesomePhotoview_targetSdkVersion', 29)
+        minSdkVersion safeExtGet('AwesomePhotoview_minSdkVersion', 21)
+        targetSdkVersion safeExtGet('AwesomePhotoview_targetSdkVersion', 33)
         versionCode 1
         versionName "1.0"
 
@@ -36,10 +36,7 @@ android {
     lintOptions {
         disable 'GradleCompatible'
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+
 }
 
 repositories {
