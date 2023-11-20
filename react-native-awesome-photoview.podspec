@@ -10,10 +10,16 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "10.0" }
+  s.platforms    = { :ios => "12.4" }
   s.source       = { :git => "https://github.com/thecatshidog/react-native-awesome-photoview.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}"
+  
+  s.dependency "YBImageBrowser"
+  s.dependency "YBImageBrowser/Video"
 
   s.dependency "React-Core"
 end
+
+
+
